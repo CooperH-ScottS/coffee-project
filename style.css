@@ -25,7 +25,6 @@ header img {
 body {
     width: 100%;
     background-image: url("images/coffe-beans-light.jpg");
-    background-repeat: no-repeat;
     background-attachment: fixed;
 }
 main {

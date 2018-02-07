@@ -37,7 +37,6 @@ function searchCoffees(value) {
     var filteredCoffees = [];
     for (var i = 0; i < coffees.length; i++) {
         if (coffees[i].name.toLowerCase().indexOf(value.toLowerCase()) > -1) {
-            // console.log(coffees[i].name);
             filteredCoffees.push(coffees[i]);
         }
     }
@@ -83,7 +82,8 @@ var coffees = [
 ];
 
 var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
+// var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
+coffees.reverse();
 tbody.innerHTML = renderCoffees(coffees);
