@@ -49,8 +49,10 @@ function addCoffee() {
         name: '',
         roast: ''
     };
+    var temp = document.getElementById('add-coffee-name').value;
+    coffee.name = formatNewCoffee(temp);
     coffee.id = coffees.length + 1;
-    coffee.name = document.getElementById('add-coffee-name').value;
+    console.log('got id');
     coffee.roast = document.getElementById('add-coffee-roast-select').value;
     coffees.push(coffee);
     arrangeCoffees();
@@ -63,6 +65,12 @@ function arrangeCoffees() {
     coffees.sort(function(a, b){return a.id - b.id});
     coffees.reverse();
 }
+
+// function from previous exercise that will capitalize each word passed into addCoffee()
+function formatNewCoffee(input) {
+    return input.replace(/\b\w/g, function(l) {
+        return l.toUpperCase()
+    })};
 
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
