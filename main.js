@@ -68,9 +68,9 @@ function arrangeCoffees() {
 
 // function from previous exercise that will capitalize each word passed into addCoffee()
 function formatNewCoffee(input) {
-    return input.replace(/\b\w/g, function(l) {
-        return l.toUpperCase()
-    })};
+    return input.replace(/\b\w/g, function(letter) {
+        return letter.toUpperCase()
+    })}
 
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
